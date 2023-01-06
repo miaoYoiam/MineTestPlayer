@@ -15,6 +15,7 @@ project("testplayer")
 # Gradle automatically packages shared libraries with your APK.
 
 file(GLOB_RECURSE LAME lame/*)
+file(GLOB_RECURSE FFMEPG ffmpeg/*)
 
 add_library( # Sets the name of the library.
         testplayer
@@ -26,6 +27,7 @@ add_library( # Sets the name of the library.
         native-lib.cpp
 
         ${LAME}
+        ${FFMEPG}
         )
 
 # Searches for a specified prebuilt library and stores the path as a
